@@ -14,36 +14,13 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <ul className={styles.navMenu}>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              Home
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              Prologue
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              Work
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              Blog
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              About
-            </a>
-          </li>
-          <li className={styles.navItem}>
-            <a href="/" className={styles.navLink}>
-              Epilogue
-            </a>
-          </li>
+          {links.map((link) => (
+            <li key={link.name}>
+              <Link href={link.target} passHref={true}>
+                <a className={styles.navLink}>{link.name}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
@@ -51,13 +28,13 @@ export default function Header() {
 }
 
 {
-  /* >
+  /* 
           {links.map((link) => (
             <li key={link.name}>
-              <Link href={link.target}>
+              <Link href={link.target} passHref>
                 <a className={styles.navLink}>{link.name}</a>
               </Link>
             </li>
           ))}
-        </ul> */
+        */
 }
