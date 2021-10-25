@@ -1,0 +1,36 @@
+Home
+Prologue
+Work
+Blog
+About
+Epilogue
+
+.header {
+  border: 2px solid red;
+  padding: 1rem 3rem;
+  font-size: 1.3rem;
+  color: darkblue;
+}
+.nav {
+  padding: 0;
+  margin: 0;
+}
+.navMenu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 2px solid green;
+}
+.navItem {
+  margin-left: 1rem;
+}
+.navLink {
+  padding: 1rem;
+  border: 2px solid pink;
+}
+
+.navLink:hover {
+  color: green;
+}

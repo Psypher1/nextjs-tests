@@ -1,0 +1,25 @@
+.header {
+  color: purple;
+  padding: 1rem 3rem;
+  border: 2px solid red;
+  font-size: 1.2rem;
+}
+
+.navMenu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+}
+
+.navItem {
+  margin-right: 1rem;
+  border: 3px solid magenta;
+}
+
+.navLink {
+  border: 2px solid green;
+  padding: 0.5rem 1rem;
+}
