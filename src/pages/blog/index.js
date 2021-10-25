@@ -12,18 +12,18 @@ export default function BlogList({ articles }) {
       <h1>Blogs Go Here</h1>
 
       {articles.map((post) => (
-        <li className="blog-list">
-          <Link key={post.title} href={post.slug}>
+        <div className="blog-list">
+          <Link key={post.slug} href={`blog/${post.slug}`}>
             {post.title}
           </Link>
-        </li>
+        </div>
       ))}
     </div>
   );
 }
 
 export async function getStaticProps() {
-  console.log(articles);
+  // console.log(articles);
   return {
     props: {
       articles,
