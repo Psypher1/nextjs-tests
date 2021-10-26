@@ -1,19 +1,22 @@
 import { articles } from "../../../articles";
 
 export default function ArticleDetail({ article }) {
-  console.log(articles);
+  // console.log(articles);
   return (
     <div>
       <h1> Single Article Page</h1>
+      <h2>{article.title}</h2>
+      <p>{article.description}</p>
     </div>
   );
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(articles);
-  const articles = await res.json();
-
-  const paths = articles.map((article) => ({
+  // const res = await fetch(articles);
+  // const articles = await res.json();
+  const posts = await articles;
+  // console.log(posts);
+  const paths = posts.map((article) => ({
     params: {
       slug: article.slug,
     },
@@ -22,18 +25,27 @@ export async function getStaticPaths() {
   console.log(paths);
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 }
-export async function getStaticProps(context) {
-  const slug = context.params.slug;
+export async function getStaticProps({ params }) {
+  const { slug } = params;
 
   console.log(slug);
-  const res = await fetch(`/articles/${slug}`);
-  const data = await res.json;
 
-  const article = data[0];
+  /* HOW AM I SUPPOSED TO USE THE SLUG TO GET THE POST*/
+
+  // const res = await fetch(`http://localhost:3000/blog/${slug}`);
+  // const data = res.json();
+  // const article = data[0];
+
+  const article = articles[0];
+
+  console.log(article);
+
   return {
-    props: { article },
+    props: {
+      article,
+    },
   };
 }

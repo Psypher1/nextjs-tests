@@ -23,5 +23,16 @@ li {
   list-style: none;
 }
 .blog-list {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.blog-item {
+  margin-bottom: 1rem;
+}
+
+.blog-item:hover {
+  color: cyan;
+}
+.blog-item:active {
+  color: blue;
 }
