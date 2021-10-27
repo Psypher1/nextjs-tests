@@ -20,7 +20,9 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
+/* I HAVE MAJOR QUERIES ABOUT THIS
+YES IT'S WORKING, BUT I BELIEVE THERE IS A BETTER WAY
+*/
 export async function getStaticProps({ params }) {
   const { slug } = params;
   console.log(params);
