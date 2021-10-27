@@ -14,4 +14,14 @@ export const articles = [
     slug: "third",
     description: "this is my third post",
   },
+  {
+    title: "Post 4",
+    slug: "fourh",
+    description: "this is my fourth post",
+  },
+  {
+    title: "Post 5",
+    slug: "fifth",
+    description: "this is my fifth post",
+  },
 ];
