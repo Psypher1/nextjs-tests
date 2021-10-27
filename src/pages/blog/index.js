@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "../../styles/Home.module.css";
 // import article data from file
 import { articles } from "../../../articles";
 
@@ -12,16 +13,17 @@ import { articles } from "../../../articles";
 
 export default function BlogList({ posts }) {
   return (
-    <div>
-      <h1>Blogs Go Here</h1>
+    <div className={styles.container}>
+      <h1>Articles</h1>
       {/* map through posts data and ouput titles */}
-      {posts.map((article) => (
-        <div className="blog-list" key={article.slug}>
-          <Link href={`blog/${article.slug}`}>
-            <a className="blog-item">{article.title}</a>
-          </Link>
-        </div>
-      ))}
+      {posts &&
+        posts.map((article) => (
+          <div className="blog-list" key={article.slug}>
+            <Link href={`/blog/${article.slug}`}>
+              <a className="blog-item">{article.title}</a>
+            </Link>
+          </div>
+        ))}
     </div>
   );
 }
@@ -34,7 +36,7 @@ export async function getStaticProps() {
   // console.log(posts);
   return {
     props: {
-      posts
+      posts,
     },
   };
 }

@@ -31,7 +31,7 @@ li {
 }
 
 .blog-item:hover {
-  color: cyan;
+  color: blueviolet;
 }
 .blog-item:active {
   color: blue;

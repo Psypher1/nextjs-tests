@@ -3,6 +3,7 @@
   padding: 1rem 3rem;
   /* border: 2px solid red; */
   font-size: 1.2rem;
+  background-color: aliceblue;
 }
 
 .navMenu {
@@ -24,5 +25,5 @@
   padding: 0.5rem 0 0.5rem 1rem;
 }
 .navLink:hover {
-  color: blue;
+  color: blueviolet;
 }
