@@ -11,7 +11,8 @@ import { articles } from "../../../articles";
 //   { title: "Second post", slug: "secong", description: "my second post" },
 // ];
 
-export default function BlogList({ posts }) {
+Blog.title = "Blog";
+export default function Blog({ posts }) {
   return (
     <div className={styles.container}>
       <h1>Articles</h1>
@@ -28,6 +29,7 @@ export default function BlogList({ posts }) {
   );
 }
 
+// fetch article data from file
 export async function getStaticProps() {
   // const res = await fetch(posts);
   // const articles = res.json();

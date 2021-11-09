@@ -1,13 +1,24 @@
 ## Finding A CMS - Part 0
 
-This project is part of my Finding A CMS series on my blog. Before I attach any backend, I built this locally to see if it could be done
+This project is part of my Finding A CMS series on my blog. Before I attach any backend, I built this locally to see if it could be done.
 
-The post data is being pulled from an `article.js` file root
+### Tasks
+
+- [x] Load a list of posts onto the page
+- [x] ? Render pages matching each individual post
+
+### Data
+
+- Test data is being loaded from `articls.js` in the project root. I had thoughts about changing it to JSON file.
+
+- In an fleshed out application, async calls would be made to some database or cms.
 
 ### My Concerns
 
-While it works I have concerns as to how I accomplished it. Particularly with the rendering of the single post page.
+Mostly in regards to the dynamic page `[slug].js` within the `src/pages/blog`
 
-If you navigate to it: `src/pages/blog/[slug].js`, you'll see its a mess
+- The code I have works, put I feel I did it incorrectly.
+- In order to pull the data matching the slug, I used filter - this is not how you would normally do this - match post slugs
+  - There is a step I am forgetting and it's stumped me.
 
-I am most certain there is a better way to do it, I just don't knoow how.
+I am most certain there is a better way to do it, I just don't know how at the moment.

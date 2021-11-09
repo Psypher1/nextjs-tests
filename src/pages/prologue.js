@@ -1,3 +1,4 @@
+Prologue.title = "Prologue";
 export default function Prologue() {
   return (
     <div>

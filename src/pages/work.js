@@ -1,3 +1,4 @@
+Work.title = "Work";
 export default function Work() {
   return (
     <div>

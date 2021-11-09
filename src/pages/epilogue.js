@@ -1,3 +1,4 @@
+Epilogue.title = "Epilogue";
 export default function Epilogue() {
   return (
     <div>

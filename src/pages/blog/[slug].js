@@ -26,9 +26,9 @@ YES IT'S WORKING, BUT I BELIEVE THERE IS A BETTER WAY
 */
 export async function getStaticProps({ params }) {
   const { slug } = params;
-  console.log(params);
-  console.log("Slug: ");
-  console.log(slug);
+  // console.log(params);
+  // console.log("Slug: ");
+  // console.log(slug);
 
   /* HOW AM I SUPPOSED TO USE THE SLUG TO GET THE POST*/
 
